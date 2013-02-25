@@ -1,0 +1,652 @@
+
+@import url(http://fonts.googleapis.com/css?family=Neuton:200,300,400,700);
+
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+	
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+/* HTML5 Shiv fix */
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+body   > code,
+div    > code,
+figure > code,
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
+body {font: 13px Helmet, Freesans, sans-serif;}
+
+/* using local fonts? make sure to read up on Paul Irish's 
+	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #ff5e99 !important; color: #fff !important; text-shadow: none;}
+::selection {background: #ff5e99 !important; color: #fff !important; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+@page {
+    margin: 1in;
+    size: portrait;
+}
+
+/*
+ * Actual Style Begins Here
+ */
+
+html, body,
+h1, h2, h3, h4, h5, p {
+	color: #333;
+    font-weight: 100;
+}
+html {
+	counter-reset: reference-count reference-count-footer figure-count;
+}
+body {
+    font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
+	font-size: 14px;
+
+	width: 600px;
+	margin: 0 auto;
+	padding: 32px 0;
+}
+
+/**
+ * Headers and basic paragraph
+ */
+
+h1, h2, h3, h4, h5 {
+	text-shadow: 1px 1px 1px transparent;
+}
+h1, h2, h3 {
+	text-transform: lowercase;
+}
+h1 {
+	text-align: center;
+	font-size: 36px;
+	margin: 0 auto;
+	width: 100%;
+}
+h2 {
+	font-size: 24px;
+	margin: 30px 0 6px 0;
+}
+h3 {
+	font-size: 22px;
+	margin: 18px 0 6px 0;
+}
+h4 {
+	margin: 15px 0 3px 0;
+    font-size: 18px;
+}
+h5 {
+}
+
+table,
+figure,
+ul {
+    margin: 18px 0;
+}
+table {
+    margin-left : 32px;
+    margin-right: 32px;
+    text-align: left;
+
+    width: 100%;
+}
+th {
+    vertical-align: top;
+    text-align: center;
+}
+td.center {
+    text-align: center;
+}
+td.row-header {
+    text-align: center;
+    padding: 9px 0 3px 0;
+    font-size: 16px;
+    font-style: italic;
+    color: #444;
+    width: 100%;
+}
+
+ul,
+ul.mark,
+ul.no-mark ul.mark {
+    list-style: lower-greek;
+    padding: 0 18px 0 48px;
+}
+ul.no-mark,
+ul.no-mark ul {
+    list-style: none;
+    padding-left: 32px;
+}
+
+li ul {
+    margin-top: 0;
+}
+
+blockquote,
+ul,
+li,
+p {
+    font-family: Segoe UI, Segoe WP, Helvetica Neue, Roboto, sans-serif;
+	font-weight: 400;
+    line-height: 21px;
+	text-align : justify;
+}
+p {
+	font-size  : inherit;
+    margin: 6px 0;
+}
+blockquote:before,
+blockquote:after {
+    content: '"';
+}
+blockquote {
+    padding: 18px 32px;
+    color: #666;
+    font-style: italic;
+}
+
+.page-break {
+    page-break-before: always;
+}
+br.page-break {
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+}
+
+.question {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    padding: 2px 36px;
+    margin: 0 0 12px 0;
+
+    font-style: italic;
+
+    background: #f2f2f2;
+    color: #555;
+
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+p > code:before,
+p > code:after {
+    content: "'";
+}
+
+body   > code,
+div    > code,
+figure > code,
+pre {
+    white-space: pre-wrap;
+
+    display: block;
+    width: 500px;
+    margin: 12px auto;
+}
+
+body.hide-todos .todo {
+    display: none !important;
+}
+
+/*
+ * Todo sections are incomplete, and skipped when printed.
+ */
+body.academic .todo,
+.todo {
+	padding:  6px  12px;
+	margin : 18px -12px;
+
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+
+	background: #ea6;
+	border-radius: 3px;
+	font-weight: 400;
+	font-style: italic;
+}
+@media print {
+    body {
+        width: 600px;
+        padding-left : 12px;
+        padding-right: 12px;
+
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+    }
+
+    h1, h2, h3, h4, h5, p {
+        text-shadow: none !important;
+    }
+    h1, h2, h3, h4, h5 {
+        font-weight: 200 !important;
+    }
+    p {
+        font-weight: 300 !important;
+    }
+
+    .todo {
+		background: transparent !important;
+
+		border: 1px solid #444;
+		color: #888;
+
+        border-radius: 6px !important;
+        border-top-left-radius: 64px 36px !important;
+        border-bottom-right-radius: 64px 36px !important;
+	}
+	.academic .todo {
+        display: none !important;
+    }
+
+    .academic blockquote,
+    blockquote {
+        font-style: italic !important;
+    }
+
+    img {
+        page-break-inside: avoid;
+    }
+}
+
+/**
+ * Content Sections
+ */
+
+header {
+	margin: 24px 24px 30px 24px;
+	text-align: center;
+}
+	header > h2 {
+		font-size: 19px;
+		font-weight: 200;
+		margin-top: 6px;
+        margin-bottom: 0;
+	}
+
+.abstract {
+	font-size: 14px;
+}
+.abstract > h2 {
+	font-size: 16px;
+}
+.abstract {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	padding: 0 36px;
+
+    margin-bottom: 24px;
+}
+	.abstract > h2 {
+        font-weight: 400;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	body.numbered {
+		counter-reset: header sub-header sub-sub-header;
+	}
+
+	body.numbered >         h2,
+	body.numbered > .main > h2 {
+		counter-reset: sub-header;
+	}
+	body.numbered >         h3,
+	body.numbered > .main > h3 {
+		counter-reset: sub-sub-header;
+	}
+	body.numbered >         h2:not( .no-index ):before,
+	body.numbered > .main > h2:not( .no-index ):before {
+		counter-increment: header;
+		content: counter(header) ". ";
+	}
+	body.numbered >         h3:not( .no-index ):before,
+	body.numbered > .main > h3:not( .no-index ):before {
+		counter-increment: sub-header;
+		content: counter(header) "." counter(sub-header) ". ";
+	}
+	body.numbered >         h4:not( .no-index ):before,
+	body.numbered > .main > h4:not( .no-index ):before {
+		counter-increment: sub-sub-header;
+		content: counter(header) "." counter(sub-header) "." counter(sub-sub-header) ". ";
+	}
+
+cite {
+    font-size: inherit;
+    font-style: normal;
+}
+cite {
+	counter-increment: reference-count;
+}
+cite:after {
+    position: relative;
+    top: -5px;
+
+    font-size: smaller;
+	content: '[' counter(reference-count) ']';
+}
+
+.centre,
+.center {
+    text-align: center;
+}
+h1 > .right,
+h2 > .right,
+h3 > .right,
+h4 > .right,
+h5 > .right {
+    float: right;
+}
+.right {
+    text-align: right;
+}
+h1 > .left,
+h2 > .left,
+h3 > .left,
+h4 > .left,
+h5 > .left {
+    float: left;
+}
+.left {
+    text-align: left;
+}
+
+figure {
+    counter-increment: figure-count;
+    text-align: center;
+    width: 100%;
+
+    padding: 0 32px;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+    figure > table {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 9px;
+    }
+    figure > img {
+        max-width: 560px;
+    }
+    figcaption {
+        font-style: italic;
+        font-weight: 16px;
+    }
+    figcaption:before {
+        content: 'fig. ' counter(figure-count) ', ' ;
+    }
+    figure > code,
+    figure > pre {
+        display: inline-block;
+        width: auto;
+        text-align: left;
+    }
+
+.reference {
+	position: relative;
+	font-size: 16px;
+	margin: 6px 0 12px 0;
+	width: 544px;
+	margin-left: 46px;
+}
+.reference.not-found {
+    padding: 3px 6px;
+    background: red;
+    color: white;
+    border-radius: 3px;
+}
+@media print {
+    .reference.not-found {
+        display: none;
+    }
+}
+.reference.not-found:before {
+    content: "CITATION NOT FOUND!: ";
+}
+	.reference > .num {
+		counter-increment: reference-count-footer;
+		display: block;
+		min-width: 37px;
+		padding-right: 9px;
+		text-align: right;
+		position: absolute;
+		right: 100%;
+		top: 0;
+	}
+	.reference > .num:before {
+		content: '[' counter(reference-count-footer) ']';
+	}
+	.reference > a {
+		display: block;
+        word-wrap: break-word;
+	}
+	.reference > a,
+	.reference > a:focus,
+	.reference > a:visited,
+	.reference > a:hover {
+		color: #333;
+		font-weight: 600;
+		text-decoration: none;
+		font-family: 'courier';
+		font-size: 13px;
+	}
+	.reference > a:hover {
+		text-decoration: underline;
+	}
+
+/*
+ * Style Academic
+ */
+
+body.academic,
+body.academic p,
+body.academic blockquote,
+body.academic ul,
+body.academic li {
+	font-family: 'Neuton', 'Times New Roman';
+	font-weight: 400;
+    font-size: 14px;
+}
+
+body.academic h1,
+body.academic h2,
+body.academic h3 {
+	text-transform: capitalize;
+}
+body.academic h1 {
+    font-size: 28px;
+    font-weight: 300;
+}
+body.academic h2 {
+    font-size: 24px;
+    font-weight: 300;
+}
+body.academic h3 {
+    font-size: 21px;
+    font-weight: 300;
+}
+body.academic h4,
+body.academic h5 {
+    font-weight: 300;
+}
+	body.academic header > h2 {
+		font-size: 21px;
+    }
+    body.academic .abstract,
+    body.academic .abstract > h2 {
+        font-size: 15px;
+    }
+    body.academic .abstract > h2 {
+		font-weight: 700;
+    }
+
+@media print {
+    body.academic h1,
+    body.academic h2,
+    body.academic h3,
+    body.academic h4,
+    body.academic h5 {
+        font-weight: 100 !important;
+    }
+    body.academic li,
+    body.academic p {
+        font-weight: 200 !important;
+    }
+    body.academic .abstract > h2 {
+        font-weight: 400 !important;
+    }
+}
+
+body.academic blockquote,
+body.academic p {
+    margin: 0;
+    line-height: normal;
+}
+/* The text indentation on following paragraphs */
+body.academic p + p {
+	text-indent: 32px;
+}
+body.academic p.no-indent {
+    text-indent: 0;
+}
