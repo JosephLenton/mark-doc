@@ -509,6 +509,11 @@ figure {
     figure > img {
         max-width: 560px;
     }
+    /* default YouTube proportion, to fit well */
+    figure > iframe {
+        width: 560px;
+        height: 420px;
+    }
     figcaption {
         font-style: italic;
         font-weight: 16px;
