@@ -196,7 +196,6 @@ h1, h2, h3 {
 	text-transform: lowercase;
 }
 h1 {
-	text-align: center;
 	font-size: 36px;
 	margin: 0 auto;
 	width: 100%;
@@ -396,6 +395,9 @@ header {
 	margin: 24px 24px 30px 24px;
 	text-align: center;
 }
+    header > h1 {
+        text-align: center;
+    }
 	header > h2 {
 		font-size: 19px;
 		font-weight: 200;
